@@ -18,6 +18,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    scroll-behavior: none;
     margin: 0;
     padding: 0;
 }
@@ -36,6 +37,7 @@ body {
     cursor: pointer;
     -webkit-user-drag: none;
     animation: newyear 6s ease-in-out infinite;
+    overflow: visible;
 }
 
 @keyframes newyear {
@@ -110,6 +112,7 @@ body {
         cursor: pointer;
         -webkit-user-drag: none;
         animation: newyear 6s ease-in-out infinite;
+        overflow: visible;
     }
 
     @keyframes newyear {

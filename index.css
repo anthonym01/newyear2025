@@ -74,24 +74,25 @@ body {
     background-color: var(--text-color);
     color: var(--background-color);
     border-radius: 50%;
-    width: 2vw;
-    height: 2vw;
+    width: 2vh;
+    height: 2vh;
     animation: bubble 10s;
     cursor: pointer;
     -webkit-user-drag: none;
+    overflow: hidden;
 }
 
 @keyframes bubble {
     0% {
         transform: translateY(3vh);
-        height: 2vw;
-        width: 2vw;
+        height: 2vh;
+        width: 2vh;
     }
 
     100% {
         transform: translateY(-100vh);
-        height: 10vw;
-        width: 10vw;
+        height: 10vh;
+        width: 10vh;
     }
 }
 
@@ -127,6 +128,35 @@ body {
 
         100% {
             text-shadow: 0 0 1vw var(--text-color);
+        }
+    }
+
+    .bubble {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--text-color);
+        color: var(--background-color);
+        border-radius: 50%;
+        width: 2vw;
+        height: 2vw;
+        animation: bubble 10s;
+        cursor: pointer;
+        -webkit-user-drag: none;
+        overflow: hidden;
+    }
+    
+    @keyframes bubble {
+        0% {
+            transform: translateY(3vh);
+            height: 2vw;
+            width: 2vw;
+        }
+    
+        100% {
+            transform: translateY(-100vh);
+            height: 10vw;
+            width: 10vw;
         }
     }
 }

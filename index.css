@@ -10,6 +10,8 @@
     }
 }
 
+
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -20,8 +22,9 @@ body {
     padding: 0;
 }
 
+/* Selects the screen, when conditions are ment */
 .newyear {
-    font-size: 10vw;
+    font-size: 10vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -29,7 +32,7 @@ body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    text-shadow: 0 0 1vw var(--text-color);
+    text-shadow: 0 0 1vh var(--text-color);
     cursor: pointer;
     -webkit-user-drag: none;
     animation: newyear 6s ease-in-out infinite;
@@ -37,15 +40,19 @@ body {
 
 @keyframes newyear {
     0% {
-        text-shadow: 0 0 1vw var(--text-color);;
+        text-shadow: 0 0 1vh var(--text-color);
+        ;
     }
+
     50% {
-        text-shadow: 0 0 3vw var(--text-color);
+        text-shadow: 0 0 3vh var(--text-color);
     }
+
     100% {
-        text-shadow: 0 0 1vw var(--text-color);
+        text-shadow: 0 0 1vh var(--text-color);
     }
 }
+
 
 .bubblearea {
     background-color: transparent;
@@ -58,7 +65,7 @@ body {
     overflow: hidden;
 }
 
-.bubble{
+.bubble {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -78,9 +85,45 @@ body {
         height: 2vw;
         width: 2vw;
     }
+
     100% {
         transform: translateY(-100vh);
         height: 10vw;
         width: 10vw;
+    }
+}
+
+/*    <--  Landscape layout / Standard (with min-width) -->     */
+@media screen and (max-aspect-ratio: 16/9) and (min-aspect-ratio: 1/1) {
+
+
+    .newyear {
+        font-size: 10vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        text-shadow: 0 0 1vw var(--text-color);
+        cursor: pointer;
+        -webkit-user-drag: none;
+        animation: newyear 6s ease-in-out infinite;
+    }
+
+    @keyframes newyear {
+        0% {
+            text-shadow: 0 0 1vw var(--text-color);
+            ;
+        }
+
+        50% {
+            text-shadow: 0 0 3vw var(--text-color);
+        }
+
+        100% {
+            text-shadow: 0 0 1vw var(--text-color);
+        }
     }
 }
